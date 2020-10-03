@@ -17,11 +17,21 @@ app.get('/', function(req, res) {
   res.send('Get ready for yfLambda!');
 })
 
-app.get('/api/token/:token_id', function(req, res) {
+app.get('/api/:token_id', function(req, res) {
   const tokenId = parseInt(req.params.token_id).toString()
-  const person = db[tokenId]
+  const attributes = db[tokenId]
   const data = {
-    'image': `${HOST}/images/${tokenId}.png`
+    'image': `${HOST}/images/` + attributes["img"],
+    'attributes': [
+      {
+        'trait_type': 'amount',
+        'value': attributes['amount']
+      },
+      {
+        'trait_type': 'minter',
+        'value': attributes['minter']
+      }
+    ]
   }
   res.send(data)
 })
