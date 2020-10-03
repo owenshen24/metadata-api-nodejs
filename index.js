@@ -1,7 +1,8 @@
 const express = require('express')
 const path = require('path')
 const { HOST } = require('./src/constants')
-const db = require('./src/database')
+const fs = require('fs');
+let db = JSON.parse(fs.readFileSync('./src/database.json'));
 
 const PORT = process.env.PORT || 5000
 
