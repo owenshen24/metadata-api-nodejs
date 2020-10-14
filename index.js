@@ -23,7 +23,7 @@ app.get('/api/:token_id', function(req, res) {
   const attributes = db[tokenId]
   const data = {
     'name': 'βetagem ' + tokenId,
-    'image': `${HOST}/images` + attributes["img"],
+    'image': `https://d3h0sbhg72k3qr.cloudfront.net/gems` + attributes["img"],
     'background_color': '191919',
     'attributes': [
       {
