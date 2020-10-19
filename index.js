@@ -47,6 +47,7 @@ app.get('/mons/:token_id', function(req, res) {
   const data = {
     'name': d["name"],
     'image': `https://d3h0sbhg72k3qr.cloudfront.net/` + d["img"],
+    'background_color': '191919',
     'attributes': [
       {
         'trait_type': 'minter',

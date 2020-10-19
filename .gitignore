@@ -2,17 +2,6 @@
 node_modules
 npm-debug.log
 
-# Local development
-*.env
-*.dev
-.DS_Store
-
-# Docker
-Dockerfile
-docker-compose.yml
-
-generate-img.py
-db.pickle
-staker-abi.json
-
-update-opensea.py
+*.py
+*.pickle
+*.csv
