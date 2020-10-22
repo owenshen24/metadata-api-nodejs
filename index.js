@@ -50,6 +50,10 @@ app.get('/mons/:token_id', function(req, res) {
     'background_color': '000000',
     'attributes': [
       {
+        'trait_type': 'ID',
+        'value': tokenId
+      },
+      {
         'trait_type': 'minter',
         'value': d['minter']
       },
