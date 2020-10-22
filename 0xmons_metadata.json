@@ -1,0 +1,7 @@
+{
+  "name": "0xmons",
+  "description": "neural network generated pixel monsters",
+  "repository": "https://github.com/owenshen24/0xmons-contracts",
+  "logo": "https://d3h0sbhg72k3qr.cloudfront.net/mon_1_static.png",
+  "keywords": ["nft", "crypto", "opensea", "erc721", "0xmons", "ai", "gan", "generative"]
+}

@@ -4,6 +4,7 @@ const path = require('path')
 const fs = require('fs');
 let db = JSON.parse(fs.readFileSync('./src/database.json'));
 let mons_db = JSON.parse(fs.readFileSync('./src/mons-database.json'));
+let monsMetadata = JSON.parse(fs.readFileSync('./0xmons_metadata.json'));
 
 const PORT = process.env.PORT || 5000;
 
@@ -18,6 +19,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res) {
   res.send('Get ready for yfLambda!');
 });
+
+app.get('/mon-data', function(req, res) {
+  res.send(monsMetadata);
+})
 
 app.get('/api/:token_id', function(req, res) {
   const tokenId = parseInt(req.params.token_id).toString()
